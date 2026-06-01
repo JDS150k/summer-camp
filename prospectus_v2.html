@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Ivy League Coding Intensive - Prospectus v2</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        @media print {
+            body {
+                background-color: #f8fafc !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            font-size: 11pt;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cover-header {
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 4px solid #2563eb;
+        }
+
+        .cover-header .subtitle {
+            color: #38bdf8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 9pt;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .cover-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 28pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .cover-header .tagline {
+            font-size: 12pt;
+            color: #cbd5e1;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-size: 16pt;
+            color: #0f172a;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+
+        p {
+            margin: 0 0 14px 0;
+            text-align: justify;
+        }
+
+        .highlight-text {
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 25px;
+            border: 1px solid #e2e8f0;
+            border-top: none;
+        }
+
+        .inline-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-top: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .grid-container {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .main-content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .stat-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-top: 3px solid #0284c7;
+            padding: 18px;
+            border-radius: 6px;
+        }
+
+        .stat-box h4 {
+            margin: 0 0 5px 0;
+            font-size: 18pt;
+            color: #0284c7;
+            font-weight: 800;
+        }
+
+        .stat-box p {
+            margin: 0;
+            font-size: 9.5pt;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        .premium-badge {
+            background-color: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .premium-badge p {
+            margin: 0;
+            font-style: italic;
+            color: #1e40af;
+            font-weight: 500;
+        }
+
+        .instructor-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .instructor-img-container {
+            flex: 1;
+            max-width: 180px;
+        }
+
+        .instructor-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+        }
+
+        .instructor-details {
+            flex: 2;
+        }
+
+        .instructor-title {
+            font-size: 14pt;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 4px 0;
+        }
+
+        .instructor-meta {
+            font-size: 9.5pt;
+            color: #2563eb;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        table.schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        table.schedule-table th {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: left;
+            padding: 12px;
+            font-size: 9.5pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        table.schedule-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 9.5pt;
+            vertical-align: top;
+        }
+
+        table.schedule-table tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        .day-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        .day-title {
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 11pt;
+            margin-bottom: 8px;
+        }
+
+        .day-title span {
+            color: #2563eb;
+            margin-right: 10px;
+            text-transform: uppercase;
+            font-size: 9pt;
+            letter-spacing: 0.5px;
+        }
+
+        .day-build {
+            background-color: #f1f5f9;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 9pt;
+            font-weight: 600;
+            color: #334155;
+            margin-top: 10px;
+            border-left: 3px solid #64748b;
+        }
+
+        .profile-item {
+            margin-bottom: 15px;
+        }
+        
+        .profile-item strong {
+            color: #0f172a;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 11pt;
+        }
+
+        .faq-block {
+            margin-bottom: 16px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 6px;
+            font-size: 10.5pt;
+        }
+
+        .faq-answer {
+            margin: 0;
+            font-size: 9.5pt;
+            color: #475569;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-bottom: 4px solid #2563eb;
+        }
+
+        .cta-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cta-details h3 {
+            color: #38bdf8;
+            margin: 0 0 10px 0;
+            font-size: 14pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-details p {
+            margin: 0 0 6px 0;
+            color: #cbd5e1;
+            font-size: 9.5pt;
+        }
+
+        .cta-price {
+            text-align: right;
+        }
+
+        .price-tag {
+            font-size: 22pt;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+
+        .price-sub {
+            font-size: 8.5pt;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-section {
+            background-color: #ffffff;
+            border: 1px solid #2563eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-title {
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 12pt;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-grid {
+            display: flex;
+            gap: 30px;
+        }
+
+        .contact-col {
+            flex: 1;
+            font-size: 9.5pt;
+        }
+        
+        .contact-col strong {
+            color: #1e3a8a;
+        }
+
+        .step-badge {
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 2px 6px;
+            font-size: 8pt;
+            font-weight: 700;
+            border-radius: 3px;
+            margin-right: 6px;
+        }
+        
+        .trust-banner {
+            background-color: #f0fdf4;
+            border: 1px dashed #22c55e;
+            color: #166534;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 9.5pt;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cover Header -->
+    <div class="cover-header">
+        <div class="subtitle">Summer Cohort • Thao Dien, Ho Chi Minh City</div>
+        <h1>The Ivy League Coding Intensive</h1>
+        <div class="tagline">An elite, hyper-focused 5-day computer science accelerator for high school leaders adapting premier foundational frameworks from Harvard University's CS50.</div>
+    </div>
+
+    <!-- Swapped Hero Image: Featuring Caucasian/International High School Students Custom to Your Demographics -->
+    <img class="hero-image" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Premium International Student Cohort">
+
+    <!-- Core Philosophy Section -->
+    <div class="grid-container">
+        <div class="main-content">
+            <h2>The Core Philosophy: Why Mass-Market Camps Fail</h2>
+            <p>Traditional summer coding programs routinely stack 15 to 20 students into a room with a single instructor. When a student encounters an inevitable syntax error or logical bug—which occurs every few minutes when learning to construct software—they sit with their hand raised, waiting. Momentum dies, frustration builds, and intellectual curiosity quickly evaporates.</p>
+            <p><span class="highlight-text">We engineer code differently.</span> We cap our cohort at a <span class="highlight-text">strict maximum of 6 students</span>. This hyper-personalized 1:6 environment ensures your child receives immediate, tailored software engineering mentorship. They never get left behind, they never sit stuck on an unhandled exception, and they progress three times faster than they would in a traditional classroom.</p>
+            
+            <div class="premium-badge">
+                <p>“Guaranteed to structurally transform computational logic, algorithmic thinking, and architectural execution within five intensive days.”</p>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <div class="stat-box">
+                <h4>1 : 6</h4>
+                <p>The elite teacher-to-student ratio. Absolute attention guaranteed.</p>
+            </div>
+            <div class="stat-box">
+                <h4>6 Seats</h4>
+                <p>Strictly limited cohort maximum to protect instruction quality.</p>
+            </div>
+            <div class="stat-box">
+                <h4>100% Managed</h4>
+                <p>Logistical friction removed. All private residential transport and executive catering are entirely handled by us.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meet Your Lead Instructor -->
+    <h2>Elite Instruction Pedigree</h2>
+    <div class="instructor-card">
+        <div class="instructor-img-container">
+            <!-- Note: If saved in the same folder as your image, 'image_fe76a2.jpg' works perfectly offline. Alternately, paste your hosted web link below. -->
+            <img class="instructor-img" src="headshot.jpg" alt="Lead Instructor">
+        </div>
+        <div class="instructor-details">
+            <div class="instructor-title">Lead Instructor & Program Founder</div>
+            <div class="instructor-meta">British Nationality • Native English Speaker</div>
+            <p style="margin-bottom: 8px;">Uncompromised code clarity requires perfect communication. The program is personally designed and delivered by a native British software professional with an extensive career driving IT-based roles inside the most prestigious international schools in Ho Chi Minh City.</p>
+            <p style="margin-bottom: 0;">As a former premier coding educator for <strong>Algorithmics</strong>, he specializes in translating advanced computational logic into clear, structured, high-retention learning milestones for ambitious international school students.</p>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- The Pedigree & Student Profiles -->
+    <h2>The Pedigree & Student Profiles</h2>
+    <p>Computer science is not about memorizing commands; it is about architectural problem-solving. This curriculum features core conceptual components adapted from <strong>Harvard University's CS50</strong>, meticulously reimagined for ambitious high school minds to maximize portfolio impact and practical development acceleration.</p>
+    
+    <div class="profile-item">
+        <strong>The Future STEM Major</strong>
+        <p>Aimed at students targeting elite international university tracks in Computer Science, Data Science, or Engineering. This program provides the foundational code clarity necessary to excel on incoming applications.</p>
+    </div>
+    <div class="profile-item">
+        <strong>The Next-Gen Entrepreneur</strong>
+        <p>Designed for young minds who view code as a vehicle to build platforms, automate workflows, or confidently unpack the underlying logic of modern Artificial Intelligence models.</p>
+    </div>
+    <div class="profile-item">
+        <strong>The Ambitious Polymath</strong>
+        <p>Perfect for high-achieving students who thrive on advanced math, system logic, or structural problem-solving and want to cross-train their cognitive capabilities over the school holidays.</p>
+    </div>
+
+    <!-- Daily Schedule Table -->
+    <h2>A Day in the Life: Balanced Rigor</h2>
+    <p>Coding demands profound mental energy. To optimize retention and avoid burnout, our daily itinerary systematically alternates between deep-focus screen architecture, collaborative logic breakdowns, and structured peer code evaluations.</p>
+    
+    <table class="schedule-table">
+        <thead>
+            <tr>
+                <th style="width: 20%;">Time</th>
+                <th style="width: 35%;">Activity</th>
+                <th style="width: 45%;">Strategic Focus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08:15 – 09:00</td>
+                <td>Private Transit Arrival</td>
+                <td>Dedicated door-to-door transport handles morning residential pickup.</td>
+            </tr>
+            <tr>
+                <td>09:00 – 10:30</td>
+                <td>Interactive Code-Along</td>
+                <td>Direct live mentoring. Students build modular logic engines alongside the instructor.</td>
+            </tr>
+            <tr>
+                <td>10:30 – 10:45</td>
+                <td>Cognitive Reset Break</td>
+                <td>Nutritious adjustments, specialized refreshments, and mental pacing.</td>
+            </tr>
+            <tr>
+                <td>10:45 – 12:15</td>
+                <td>The Engineering Lab</td>
+                <td>Students solve complex algorithmic problem sets with immediate 1-on-1 assistance.</td>
+            </tr>
+            <tr>
+                <td>12:15 – 13:15</td>
+                <td>Catered Executive Lunch</td>
+                <td>High-quality Western & Asian menus provided by our premium culinary partner.</td>
+            </tr>
+            <tr>
+                <td>13:15 – 14:00</td>
+                <td>Off-Screen Logic Sprints</td>
+                <td>Gamified computational thinking: cryptography, structural mapping, and data puzzles.</td>
+            </tr>
+            <tr>
+                <td>14:00 – 15:30</td>
+                <td>Creative Feature Expansion</td>
+                <td>Students implement bespoke features into their original script variants.</td>
+            </tr>
+            <tr>
+                <td>15:30 – 15:45</td>
+                <td>Afternoon Decompression</td>
+                <td>Light relaxation and strategic mental pacing before final execution check.</td>
+            </tr>
+            <tr>
+                <td>15:45 – 16:30</td>
+                <td>Code Review & Standup</td>
+                <td>Peer-led walk-throughs. Students articulate engineering logic and optimize edge cases.</td>
+            </tr>
+            <tr>
+                <td>16:30</td>
+                <td>Residential Transit Departure</td>
+                <td>Private transport returns students directly to their homes in D2 / D7.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="page-break"></div>
+
+    <!-- The 5-Day Core Curriculum -->
+    <h2>The 5-Day Technical Runway</h2>
+    <p>Leveraging Python—the cornerstone language of modern AI, data architectures, and industrial-grade backend engineering—students build a progressive pipeline of functional, live software assets.</p>
+
+    <div class="day-card">
+        <div class="day-title"><span>Day 1</span>The Logic Shift: Visual to Text Architecture</div>
+        <p>Deconstructing structural algorithms through Harvard's visual scaffolding before immediately transitioning into typing pure Python script configurations. Mastering variables, conditional statements, and iterative loops.</p>
+        <div class="day-build">The Production Build: A complex, multi-path algorithmic text game engine.</div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-title"><span>Day 2</span>Data Architectures & Relational Systems</div>
+        <p>Deep-diving into how modern enterprise platforms map, preserve, reference, and iterate over complex nested lists, data objects, and system dictionaries.</p>
+        <div class="day-build">The Production Build: A robust cryptographic text encryptor and validation mechanism.</div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-title"><span>Day 3</span>Industrial Engineering & Defensive Debugging</div>
+        <p>The developer's ultimate skillset. Embracing software failures by learning to systematically read complex terminal stack traces, identify memory anomalies, and build bulletproof, defensive logic blocks.</p>
+        <div class="day-build">The Production Build: A fully automated, custom command-line system utility.</div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-title"><span>Day 4</span>Leveraging the Cloud: APIs & Framework Modules</div>
+        <p>Breaking out of isolated computers. Teaching scripts to communicate with the world by querying live cloud databases and processing third-party Application Programming Interfaces (APIs).</p>
+        <div class="day-build">The Production Build: A dynamic, real-time live data tracker panel.</div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-title"><span>Day 5</span>Code Optimization & The Public Engineering Portfolio</div>
+        <p>Refactoring architecture for enterprise-level clarity, building comprehensive documentation, and deploying live version control configurations through professional profiles.</p>
+        <div class="day-build">The Production Build: The Final Capstone Project and Live Family Demonstration Ceremony.</div>
+    </div>
+
+    <!-- FAQ Section -->
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-block">
+        <div class="faq-question">Why is the tuition set at 28,000,000 VND?</div>
+        <p class="faq-answer">This is a highly exclusive, all-inclusive boutique program. To protect instruction quality, we prioritize absolute student focus over bulk attendance. Your tuition covers premium 1:6 expert technical coaching, specialized digital tooling, private door-to-door transit routes, and daily fine catering. There are zero external hidden fees.</p>
+    </div>
+
+    <div class="faq-block">
+        <div class="faq-question">What hardware infrastructure must we provide?</div>
+        <p class="faq-answer">Students must provide a personal modern laptop (MacBook or Windows PC) less than 5 years old equipped with Wi-Fi functionality. iPads or mobile tablets are inadequate. A lightweight installation setup guide will be forwarded 3 days prior to camp launch to configure our primary compiler environment (VS Code).</p>
+    </div>
+
+    <div class="faq-block">
+        <div class="faq-question">Is prior computer programming experience required?</div>
+        <p class="faq-answer">No. The architectural framework is intentionally organized to take ambitious minds from zero technical experience on Monday morning to a live, professional digital portfolio by Friday afternoon.</p>
+    </div>
+
+    <!-- Registration Box -->
+    <div class="cta-box">
+        <div class="cta-grid">
+            <div class="cta-col cta-details">
+                <h3>Secure Elite Placement</h3>
+                <p><strong>Cohort Boundary:</strong> Strictly Capped at 6 Students Maximum</p>
+                <p><strong>Schedule Framework:</strong> Monday to Friday | 09:00 – 16:30 Daily</p>
+                <p><strong>Inclusions:</strong> Door-to-Door Transit Route & Full Executive Catering</p>
+            </div>
+            <div class="cta-col cta-price">
+                <div class="price-tag">28,000,000 VND</div>
+                <div class="price-sub">All-Inclusive Tuition Fee</div>
+                <p style="margin-top: 10px; font-size: 8pt; color: #a5f3fc; text-align: right;">5,000,000 VND deposit required to lock seat.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dedicated Contact & Action Plan Section -->
+    <div class="contact-section">
+        <div class="contact-title">Admissions & Verification Process</div>
+        <p style="font-size: 9.5pt; margin-bottom: 15px;">Due to our uncompromised classroom limits, seats are filled strictly chronologically via direct application vetting.</p>
+        
+        <div class="contact-grid">
+            <div class="contact-col" style="padding-right: 15px;">
+                <p><span class="step-badge">1</span><strong>Initiate Vetting:</strong> Direct message our admissions coordinator via the channels listed on the right.</p>
+                <p><span class="step-badge">2</span><strong>Consultation Call:</strong> A brief 5-minute compatibility assessment to log student goals and confirm development logistics.</p>
+                <p><span class="step-badge">3</span><strong>Seat Confirmation:</strong> Submit the securement deposit to finalize residential transit and catering routing panels.</p>
+            </div>
+            <div class="contact-col" style="border-left: 1px dashed #cbd5e1; padding-left: 20px;">
+                <p style="margin-top:0;"><strong>Program Director:</strong> Private Cohort Management</p>
+                <p>💬 <strong>WhatsApp / Zalo:</strong> [Insert Your Phone Number Here]</p>
+                <p>📧 <strong>Direct Email:</strong> [Insert Your Business Email Here]</p>
+                <p>🌐 <strong>Profile Channel:</strong> fb.com/[YourProfileHandle]</p>
+                
+                <div class="trust-banner">
+                    🔒 Send the word REFERENCES to me on WhatsApp/Zalo to immediately receive verified parent and school credentials.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
